@@ -8,6 +8,9 @@
 body{
     display: grid;
     grid-template-rows: auto 1fr auto;
+    /*
+    max-width: 100%;
+    overflow-x: hidden; */
     font-family: 'Lato', sans-serif;
 }
 
@@ -53,19 +56,25 @@ footer, footer a{
 
 .content{
     padding: 3em;
+    /* min-height: 6m (3em padding top and bottom), header height, footer height */
+    min-height: calc(100vh - 6em - 50px - 50px);
 }
 .about{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1rem;
-    justify-content: space-between;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 2fr));
+    grid-gap: 1.5rem;*/
+
+    display: flex;
+
+    justify-content: start;
     margin-bottom: 2em;
     height: auto;
 }
 
 .photo{
-    width: 275px;
+    min-width: 275px;
     height: 350px;
+    margin-right: 1em;
     position: relative;
 }
 
@@ -83,7 +92,6 @@ footer, footer a{
     top: 25px;
     left: 25px;
 }
-
 
 
 .about-blurb h2{
@@ -203,3 +211,18 @@ footer, footer a{
     display: hidden;
 }
 
+@media only screen and (max-width: 590px){
+    .content{
+        padding: 10px;
+    }
+
+    .project-grid{
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .project-preview{
+        width:200px;
+        height: 200px;
+    }
+}
