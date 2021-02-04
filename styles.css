@@ -56,6 +56,8 @@ footer, footer a{
 
 .content{
     padding: 3em;
+    box-sizing: border-box; /*box-sizing property*/
+    width: 100%;
     /* min-height: 6m (3em padding top and bottom), header height, footer height */
     min-height: calc(100vh - 6em - 50px - 50px);
 }
@@ -85,7 +87,7 @@ footer, footer a{
 }
 
 .photo-img{
-    background-image: url("samplepfp.jpg");
+    background-image: url("images/natisha.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
