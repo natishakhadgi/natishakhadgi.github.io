@@ -58,7 +58,7 @@ footer, footer a{
     position: absolute;
     display: none;
     top: 0;
-    right: 1rem;
+    right: 0;
 }
 
 .content{
