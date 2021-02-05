@@ -8,9 +8,6 @@
 body{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    /*
-    max-width: 100%;
-    overflow-x: hidden; */
     font-family: 'Lato', sans-serif;
 }
 
@@ -58,7 +55,7 @@ footer, footer a{
     position: absolute;
     display: none;
     top: 0;
-    right: 0;
+    right: 20px;
 }
 
 .content{
@@ -161,7 +158,6 @@ footer, footer a{
 .project-grid{
     margin-top: 1em;
     display: grid;
-    /*grid-template-columns: repeat(4, auto);*/
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1rem;
 }
@@ -281,12 +277,16 @@ footer, footer a{
     }
     .project-grid{
         grid-gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .project-grid a{
+        font-size: small;
     }
 
     .project-preview{
-        width:200px;
-        height: 200px;
+        width:150px;
+        height: 150px;
     }
 
     .footer-nav{
