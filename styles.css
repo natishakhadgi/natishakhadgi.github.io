@@ -26,7 +26,6 @@ hr{
 header, header a, footer, footer a{
     display: flex;
     justify-content: space-between;
-    background-color: #FD766A;
     color: white;
     min-height: 50px;
     place-items: center;
@@ -35,11 +34,12 @@ header, header a, footer, footer a{
 
 header, footer{
     padding-left: 3em;
+    padding-right: 3em;
+    background-color: #FD766A;
 }
 
 header ul, footer ul{
     display: flex;
-    margin-right: 3em;
 }
 
 header li a, footer li a{
@@ -52,6 +52,13 @@ header a:hover, footer a:hover{
 
 footer, footer a{
     background-color: #AE73A9;
+}
+
+.toggle{
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 1rem;
 }
 
 .content{
@@ -213,9 +220,46 @@ footer, footer a{
     display: hidden;
 }
 
-@media only screen and (max-width: 590px){
+@media only screen and (max-width: 610px){
     .content{
         padding: 10px;
+    }
+
+    .toggle{
+        display: flex;
+    }
+
+    header{
+        flex-direction: column;
+    }
+
+    .name{
+        width: 100%;
+        height: 25px;
+        text-align: center;
+    }
+
+    .nav{
+        width: 100%;
+    }
+
+    .nav-links{
+        width: 100%;
+        display: none;
+    }
+    .nav-links ul{
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .nav-links li{
+        margin: auto;
+        height:25px;
+    }
+
+    .nav-links.active{
+        display: flex;
     }
 
     .project-grid{
@@ -226,5 +270,9 @@ footer, footer a{
     .project-preview{
         width:200px;
         height: 200px;
+    }
+
+    .footer-nav{
+        display: none;
     }
 }
