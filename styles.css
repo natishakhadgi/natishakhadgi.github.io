@@ -133,7 +133,11 @@ footer, footer a{
 .fa-link{
     font-size: 27px;
 }
-
+.iconify{
+    font-size:30px;
+    margin-top: 7px;
+    margin-left: -2px;
+}
 .icons-project{
     margin: 10px 0 10px 0;
 }
